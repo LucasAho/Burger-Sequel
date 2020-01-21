@@ -1,5 +1,5 @@
 // Imports MySQL connection.
-var connection = require("../config/connection.js");
+var connection = require("./connection.js.js");
 
 printMysqlVars = (num)  => {
     var arr = [];

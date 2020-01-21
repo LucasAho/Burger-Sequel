@@ -31,5 +31,8 @@ This website has little true function, but serves as a guideline for server/clie
 ### BURGER
 * server.js: Connects to PORT 8080, and requires express and express-handlebars. Running this file in Node will begin entire program, marked by a console.log listener. 
 
-
-
+# TO DO
+* model/burger.js is sequeilized
+Don't forget to edit the model and initial migration file to make the burger's devoured field carry a default value of false -- otherwise you might encounter bugs.
+Don't forget to sync the models!
+* Edit your new config.json file to include your database configurations. Place your JawsDB details in the production property of your json file; the details of your local database go in the developer property.
