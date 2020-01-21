@@ -1,0 +1,73 @@
+<div class = "container">
+
+    <div class="row d-flex justify-content-center mt-4">  
+               
+        <img src="/assets/images/burger-img.jpg" width="25%" height="25%">
+        
+        <div class="col-12 text-center my-3">
+            <h1 class="text-danger">Eat-Da-Burger</h1>
+        </div> 
+    </div>
+
+    <div class="row mt-4">
+        
+        <div class="col-6">
+            <ul>
+                {{#each burgers}}
+
+                
+                    {{#unless devoured}}
+                    <div class="row mx-3">
+                    <div class="col-6 bg-secondary float-left uneaten-Burger p-3">
+                        {{burger_name}}                            
+                    </div>
+
+                    <div class="float-right">
+                        <button class="btn btn-secondary devourIt mx-5" id="eatBtn" value={{id}} type="submit">Devour It</button>
+                    </div>
+                   
+                    </div>
+                     <br>
+                    {{/unless}}
+                    
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-3 justify-content-right">
+            <ol>
+                
+                {{#each burgers}}
+                
+                    {{#if devoured}}
+                        <li class="eaten-Burger p-3">
+                            {{burger_name}}                            
+                        </li>
+                        
+                    {{/if}}
+                
+                {{/each}}
+</div>
+            </ol>
+        </div>
+
+    </div>
+
+     <!--User input block-->
+    <div class="row d-flex justify-content-center">
+        
+        <form class="create-form col-12 text-center mt-3">
+            <div class="form-group">
+                <input type="text" class="cssBurger text-center" id="newBurger">
+                <br>
+                
+            </div>
+            
+            <p>Just enter a burger you want to eat and click the Submit button!</p>
+            <button class="btn btn-primary mt-2" type="submit">Submit</button>
+        </form>
+
+    </div>
+  
+    
+</div>
